@@ -1,92 +1,101 @@
-# Career Skills Intelligence
+# Bank Customer Churn Analysis
 
-**Exploring the skills, salaries, and qualifications shaping the job market across industries.**
+## Project Overview
 
-## Overview
+This project analyzes bank customer data to investigate patterns associated with customer churn. Using Python, Pandas, and statistical analysis, the goal is to identify customer characteristics associated with leaving the bank and translate the findings into actionable business insights.
 
-Career Skills Intelligence is a data analytics project designed to explore job market trends and identify the skills employers seek across occupations and industries.
+Customer churn is an important business concern because losing customers can affect revenue, customer retention, and long-term growth. Understanding which customer segments have higher churn rates can help businesses make more informed decisions about customer retention strategies.
 
-By analyzing job postings, this project aims to uncover in-demand skills, compare occupational requirements, examine salary trends, and identify transferable skills that may support career mobility.
+## Business Problem
 
-The goal is to transform raw job market data into actionable insights through data analysis, SQL querying, and interactive visualization.
+Banks need to understand which customers are most likely to leave and what characteristics are associated with churn.
 
-**Project status:** In development
+This project investigates customer demographics, banking product usage, and other account characteristics to identify patterns in customer churn.
 
-## Objectives
+## Research Questions
 
-- Identify the most frequently requested skills across occupations.
-- Compare technical and nontechnical skill requirements across industries.
-- Explore salary distributions across roles, experience levels, and locations where data is available.
-- Investigate skill overlap between occupations to identify transferable skills.
-- Build an interactive dashboard that allows users to explore job market trends.
+The analysis focuses on the following questions:
 
-## Key Questions
+1. Is customer churn associated with gender?
+2. Do churn rates differ across age groups?
+3. Is the number of bank products a customer owns associated with churn?
+4. Do churn rates differ by geographic location?
+5. Is credit card ownership associated with churn?
+6. How does customer tenure relate to churn?
+7. Are credit score groups associated with different churn rates?
 
-1. Which skills are most frequently requested across different occupations?
-2. How do skill requirements vary by industry and experience level?
-3. Which skills are associated with higher advertised salaries?
-4. Which skills overlap across different occupations?
-5. How do occupational requirements differ across locations?
-6. What insights can job seekers use to guide their professional development?
-
-## Tools & Technologies
-
-| Technology | Purpose |
-|---|---|
-| Python | Data cleaning and preparation |
-| Pandas | Data manipulation and analysis |
-| SQL / MySQL | Querying and analytical transformations |
-| Power BI | Interactive dashboard and visualization |
-| Jupyter Notebook | Exploratory data analysis |
-| Git & GitHub | Version control and project documentation |
+These questions will be explored using descriptive statistics, data visualization, and appropriate statistical tests.
 
 ## Dataset
 
-This project will use a publicly available job-postings dataset sourced from Kaggle to investigate skill demand, salary trends, and occupational requirements across industries.
+The project uses the Bank Customer Churn Modelling dataset, which contains customer-level information and a binary indicator of whether a customer exited the bank.
 
-The dataset will be evaluated for occupational coverage, data quality, available skill information, salary completeness, and date range before analysis begins.
+Relevant variables include:
 
-Source: LinkedIn Job Postings dataset (2023–2024)
+- `Gender` — Customer gender
+- `Age` — Customer age
+- `CreditScore` — Customer credit score
+- `Geography` — Customer's country
+- `Tenure` — Number of years the customer has been with the bank
+- `NumOfProducts` — Number of bank products held by the customer
+- `HasCrCard` — Whether the customer has a credit card
+- `Exited` — Whether the customer left the bank (1 = exited, 0 = retained)
 
-Status: Dataset validation pending.
+The dataset contains 10,000 customer records in the version currently being analyzed.
 
-The final documentation will include the dataset's structure, relevant variables, licensing information, preprocessing decisions, and limitations.
+## Tools & Technologies
 
-## Planned Analysis
+- **Python** — Data analysis and statistical computing
+- **Pandas** — Data cleaning, grouping, and transformation
+- **SciPy** — Statistical hypothesis testing
+- **Matplotlib / Seaborn** — Data visualization
+- **Jupyter Notebook / Google Colab** — Analysis environment
+- **Git & GitHub** — Version control and project documentation
 
-- **Data preparation:** Assess data quality, handle missing values, remove duplicates, and standardize relevant fields.
-- **Skill analysis:** Measure skill demand across occupations and industries.
-- **Salary analysis:** Explore advertised compensation and its relationship with job requirements.
-- **Career comparisons:** Compare skill profiles and identify overlapping competencies.
-- **Interactive visualization:** Develop filters and charts that help users explore findings.
-- **Documentation:** Communicate findings, methodology, assumptions, and limitations.
+## Project Workflow
 
-## Dashboard Preview
+### 1. Data Inspection and Cleaning
+- Inspect dataset structure and data types.
+- Check for missing values and duplicate records.
+- Validate customer identifiers and key variables.
+- Create categorical groups for age, credit score, tenure, and number of bank products.
 
-*Dashboard in development. Screenshots and interactive report links will be added as features are completed.*
+### 2. Exploratory Data Analysis
+- Calculate overall customer churn.
+- Compare churn rates across customer segments.
+- Examine demographic and account characteristics associated with churn.
+- Identify patterns that warrant further investigation.
 
-## Key Findings
+### 3. Statistical Analysis
+- Formulate null and alternative hypotheses.
+- Use chi-square tests to examine associations between churn and categorical variables.
+- Interpret p-values alongside observed differences and effect sizes.
+- Evaluate whether findings are statistically meaningful without assuming causation.
 
-*Findings will be documented after the data has been cleaned and analyzed. No results have been claimed before analysis.*
+### 4. Business Insights and Recommendations
+- Summarize the strongest patterns in customer churn.
+- Identify customer segments that may warrant further investigation.
+- Develop evidence-based recommendations, subject to the results of the analysis.
 
-## Reproducibility
+## Current Status
 
-Instructions for obtaining the dataset, installing dependencies, running the analysis, and accessing the dashboard will be added as the project develops.
+**In progress:** Data inspection, feature grouping, and exploratory data analysis.
+
+Initial churn-rate comparisons have identified differences across gender, age groups, geography, and number of bank products. These patterns will be investigated further through statistical testing before conclusions are drawn.
 
 ## Limitations
 
-- Job postings may not represent every occupation or employer.
-- Advertised salaries may be missing or reported inconsistently.
-- Skill mentions do not necessarily indicate that a skill is mandatory.
-- Associations between skills and salary do not establish causation.
-- Results depend on the dataset's coverage, source, and collection period.
+- Observed associations do not establish causation.
+- Results depend on the dataset's coverage and representativeness.
+- Grouping continuous variables can obscure differences within categories.
+- Statistical significance will be evaluated alongside practical importance and sample sizes.
 
-## Project Goals
+## Future Improvements
 
-This project is intended to demonstrate practical skills in data preparation, SQL analysis, exploratory data analysis, data visualization, and analytical communication while building a foundation for future career intelligence features.
+- Complete statistical hypothesis testing.
+- Explore multivariable logistic regression, if appropriate.
+- Translate findings into practical customer retention recommendations.
 
----
+## Key Takeaway
 
-**Author:** Donalthea Drysdale
-
-**Focus:** Data Analytics · Business Intelligence · Labor Market Analysis · Data Science
+The goal of this project is to demonstrate how data analysis can help businesses investigate customer churn, evaluate patterns in customer behavior, and make more informed retention decisions.
